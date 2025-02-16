@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit of the Day</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <nav>
+        <button onclick="scrollToSection('main')">Home</button>
+        <button onclick="scrollToSection('video')">Video</button>
+        <button onclick="scrollToSection('gallery')">Gallery</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+    </nav>
+
+    <!-- Main Section with Centered GIF -->
+    <section id="main">
+        <div class="main-content">
+            <header><h1>Welcome to Your Digital Closet!</h1></header>
+        </div>
+        <div class="center-container">
+            <img src="media/mainphoto.jpg" alt="Dress Animation" class="center-gif">
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+        <h2>What do NYUAD students wear?</h2>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1yPK4gimLQsuO3gBLt7Dy_7uzWMqDLI0A/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2 class="gallery-title">Uzbek attire for your closet</h2>
+    <div class="slideshow-container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="media/chapan2.jpg" style="width:100%">
+                <div class="text">Chopon – A timeless Uzbek robe.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="media/dress.jpg" style="width:100%">
+                <div class="text">Adras – Handwoven Uzbek craftsmanship.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="media/doppi2.jpg" style="width:100%">
+                <div class="text">Do‘ppi – Traditional Uzbek skullcap.</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form action="action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

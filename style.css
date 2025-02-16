@@ -1,0 +1,300 @@
+/* Reset default styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #4B164C;
+   padding: 10px 0;
+   text-align: center;
+   z-index: 1000;
+}
+
+button {
+   background-color: #FF99CC;
+   color: white;
+   padding: 10px 20px;
+   font-size: 18px;
+   border: none;
+   cursor: pointer;
+   margin: 5px;
+   border-radius: 5px;
+   transition: 0.3s ease;
+}
+
+button:hover {
+   background-color: #DD88CF;
+}
+
+/* Section Styling */
+section {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   text-align: center;
+}
+
+/* Main Page with Gradient Background */
+#main {
+   background: linear-gradient(to bottom, #ffcccc, #4B164C);
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Centered Title Above Image */
+.main-content {
+   text-align: center;
+   color: white;
+   width: 100%;
+   position: absolute;
+   top: 10%;
+}
+
+.main-content h1 {
+   font-size: 40px;
+   font-weight: bold;
+}
+
+/* Centered GIF */
+.center-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+.center-gif {
+   max-width: 100%;
+   max-height: 80vh;
+   object-fit: contain;
+}
+
+/* Video Section */
+#video {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(to bottom, #4B164C, #ffcccc);
+   position: relative;
+}
+
+#video h2 {
+   position: absolute;
+   top: 80px;
+   font-size: 28px;
+   color: white;
+}
+
+.video-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
+
+iframe {
+   width: 80%;
+   height: 50vh;
+   max-width: 800px;
+   border: none;
+}
+
+/* Gallery Section */
+#gallery {
+   background: linear-gradient(to bottom, #ffcccc, #4B164C);
+   padding: 50px 0;
+   position: relative;
+}
+
+.gallery-title {
+   position: absolute;
+   top: 80px;
+   left: 50%;
+   transform: translateX(-50%);
+   font-size: 36px;
+   color: white;
+   font-family: "Dancing Script", cursive;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slideshow-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
+}
+
+.mySlides {
+   display: none;
+}
+
+.mySlides img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+/* Gallery Navigation Buttons Positioned on Sides */
+.prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 50px;
+   height: 50px;
+   padding: 16px;
+   background: rgba(0,0,0,0.5);
+   color: white;
+   font-weight: bold;
+   font-size: 24px;
+   border-radius: 50%;
+   transition: 0.3s ease;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.prev {
+   left: -60px;
+}
+
+.next {
+   right: -60px;
+}
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* Dots */
+.dot {
+   height: 15px;
+   width: 15px;
+   margin: 5px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: 0.3s ease;
+}
+
+.active, .dot:hover { background-color: #717171; }
+
+/* Gallery Image Text Styling */
+.text {
+   color: white;
+   font-size: 24px;
+   font-weight: bold;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 📧 Contact Section with Gradient Background */
+#contact {
+   background: linear-gradient(to bottom, #4B164C, #ffcccc);
+   width: 100%;
+}
+
+.contact-container {
+   text-align: center;
+   width: 100%;
+   max-width: 600px;
+   margin: auto;
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container input, .contact-container textarea, .contact-container select {
+   width: 100%;
+   padding: 10px;
+   margin: 10px 0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+.contact-container button {
+   background-color: #FF99CC;
+   color: white;
+   padding: 12px 20px;
+   border-radius: 5px;
+   font-size: 18px;
+   transition: 0.3s ease;
+}
+
+.contact-container button:hover {
+   background-color: #DD88CF;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+   nav {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+
+   button {
+       font-size: 16px;
+       padding: 8px 15px;
+   }
+
+   .center-gif {
+       max-width: 90%;
+       max-height: 60vh;
+   }
+
+   iframe {
+       width: 100%;
+       height: 40vh;
+   }
+
+   .prev, .next {
+       width: 40px;
+       height: 40px;
+       font-size: 20px;
+   }
+
+   .prev {
+       left: 10px;
+   }
+
+   .next {
+       right: 10px;
+   }
+
+   #video h2 {
+       font-size: 22px;
+       top: 10px;
+   }
+
+   .contact-container {
+       width: 90%;
+   }
+}
+/* Apply Dancing Script for main headers */
+h1, h2 {
+   font-family: "Dancing Script", cursive;
+}
+
+/* Apply Satisfy for any stylish text (like gallery descriptions) */
+.text, p, label, button {
+   font-family: "Satisfy", cursive;
+}
+
+ 
